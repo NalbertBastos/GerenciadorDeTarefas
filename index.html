@@ -6,11 +6,19 @@
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style >
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
-<body>
+<body id="corpo">
     <div class="container">
         <div class="card">
             <h1 class="card-header">Lista de Tarefas</h1>
+            <img src="—Pngtree—black moon and stars icon_5045591.png" onclick="noturno()">
+            <img src="—Pngtree—sun_931710.png" onclick="sol()">
             <div class="card-body">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Digite tarefa" name="tarefa" autofocus>
@@ -23,7 +31,30 @@
                 </ul>
             </div>
         </div>
-    </div>    
+    </div>  
+    <script>
+        function noturno(){
+            let body = document.querySelector('#corpo')
+            body.style.backgroundColor = 'rgb(30,30,30)'
+            let card = document.querySelector('.card')
+            card.style.backgroundColor = 'rgb(20,20,20)'
+            card.style.color = 'white'
+            let input = document.querySelector('.form-control')
+            input.style.backgroundColor = 'rgba(50,50,50,0.5)'
+            input.style.color = "white"
+        }
+        function sol(){
+            let body = document.querySelector('#corpo')
+            body.style.backgroundColor = 'white'
+            let card = document.querySelector('.card')
+            card.style.backgroundColor = 'white'
+            card.style.color = 'black'
+            let input = document.querySelector('.form-control')
+            input.style.backgroundColor = 'white'
+            input.style.color = "black"
+
+        }
+    </script>  
     <script src="js/script.js"></script>
 </body>
 </html>
